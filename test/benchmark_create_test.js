@@ -7,6 +7,7 @@
 const { SqliteDriver } = require('clay-driver-sqlite')
 const benchmarkCreate = require('../lib/cases/benchmark_create.js')
 const assert = require('assert')
+const filedel = require('filedel')
 const co = require('co')
 
 describe('benchmark-create', function () {
@@ -22,7 +23,10 @@ describe('benchmark-create', function () {
 
   it('Benchmark create', () => co(function * () {
     let storage = `${__dirname}/../tmp/benchmark-create-test.db`
-    let driver = new SqliteDriver(storage)
+    yield filedel(storage)
+    let driver = new SqliteDriver(storage, {
+      logging: console.log
+    })
     yield benchmarkCreate(driver)
   }))
 })

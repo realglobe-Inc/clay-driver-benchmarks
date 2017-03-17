@@ -42,6 +42,7 @@
     "ape-updating": "^4.1.0",
     "clay-driver-sqlite": "^2.0.3",
     "coz": "^6.0.20",
+    "filedel": "^2.0.5",
     "injectmock": "^2.0.0",
     "sugos-travis": "^2.0.7"
   },
