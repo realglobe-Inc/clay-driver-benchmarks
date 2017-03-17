@@ -109,6 +109,13 @@ Available Test Cases
 
 | Signature | Description |
 | ---- | ----------- |
+| `benchmarkCreate(driver, options)` | Test create method of driver |
+| `benchmarkDestroy(driver, options)` | Test destroy method of driver |
+| `benchmarkDrop(driver, options)` | Test drop method of driver |
+| `benchmarkList(driver, options)` | Test list method of driver |
+| `benchmarkOne(driver, options)` | Test one method of driver |
+| `benchmarkResources(driver, options)` | Test resources method of driver |
+| `benchmarkUpdate(driver, options)` | Test update method of driver |
 
 
 <!-- Section from "doc/guides/03.Cases.md.hbs" End -->
@@ -122,7 +129,7 @@ Available Test Cases
 
 License
 -------
-This software is released under the [MIT License](https://github.com/realglobe-Inc/clay-driver-benchmarks/blob/master/LICENSE).
+This software is released under the [Apache-2.0 License](https://github.com/realglobe-Inc/clay-driver-benchmarks/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
