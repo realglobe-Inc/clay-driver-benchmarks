@@ -11,7 +11,7 @@ const filedel = require('filedel')
 const co = require('co')
 
 describe('benchmark-create', function () {
-  this.timeout(30000)
+  this.timeout(300000)
 
   before(() => co(function * () {
 
