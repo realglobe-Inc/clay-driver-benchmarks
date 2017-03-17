@@ -1,0 +1,22 @@
+/**
+ * Test {{name}} method of driver
+ * @function benchmark{{pascalcase name}}
+ * @function run
+ * @param {Driver} driver - Driver to benchmark
+ * @param {Object} [options={}] - Optional settings
+ * @throws {Error} Test fail error
+ */
+'use strict'
+
+const co = require('co')
+
+/** @lends benchmark{{pascalcase name}} */
+function benchmark{{pascalcase name}} (driver, options = {}) {
+  const RESOURCE_NAME = 'driver-benchmark-{{spinalcase name}}'
+  return co(function * () {
+
+    yield driver.drop(RESOURCE_NAME)
+  })
+}
+
+module.exports = benchmark{{pascalcase name}}
