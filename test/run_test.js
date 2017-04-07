@@ -4,10 +4,8 @@
  */
 'use strict'
 
-const { SqliteDriver } = require('clay-driver-sqlite')
-const filedel = require('filedel')
+const { MemoryDriver } = require('clay-driver-memory')
 const run = require('../lib/run.js')
-const assert = require('assert')
 const co = require('co')
 
 describe('run', function () {
@@ -22,9 +20,7 @@ describe('run', function () {
   }))
 
   it('Sqlite', () => co(function * () {
-    let storage = `${__dirname}/../tmp/benchmark-run-test.db`
-    yield filedel(storage)
-    let driver = new SqliteDriver(storage, {
+    let driver = new MemoryDriver({
       // logging: console.log
     })
     yield run(driver)
