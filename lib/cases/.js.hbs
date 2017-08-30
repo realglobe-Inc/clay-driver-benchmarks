@@ -12,7 +12,7 @@ const co = require('co')
 
 /** @lends benchmark{{pascalcase name}} */
 function benchmark{{pascalcase name}} (driver, options = {}) {
-  const RESOURCE_NAME = 'driver-bchmk-{{spinalcase name}}'
+  const RESOURCE_NAME = 'd-bchmk-{{spinalcase name}}'
   return co(function * () {
 
     yield driver.drop(RESOURCE_NAME)
